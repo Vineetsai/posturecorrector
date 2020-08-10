@@ -1,8 +1,5 @@
-input.onButtonPressed(Button.A, function () {
-	basic.showNumber(Math.abs(input.rotation(Rotation.Pitch)))
-})
-input.rotation(Rotation.Pitch)
 // console.log("" + (input.rotation(Rotation.Pitch)))
 basic.forever(function () {
-	
+    serial.writeValue("pitch", input.rotation(Rotation.Pitch))
+    basic.pause(100)
 })
